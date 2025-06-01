@@ -112,7 +112,7 @@ This project is a simple URL shortener service, similar to Bitly. It allows user
 
 5. **Access the API**
 
-   - Base URL: `http://localhost:3000/`
+   - Base URL: `http://localhost:8000/`
    - Use a tool like [Postman](https://www.postman.com/) or [curl](https://curl.se/) to test endpoints.
 
 
