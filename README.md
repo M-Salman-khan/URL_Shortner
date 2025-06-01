@@ -1,4 +1,4 @@
-# Bitly - URL Shortener Backend
+# URL Shortener Backend
 
 ## Overview
 
