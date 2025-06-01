@@ -14,7 +14,8 @@ This project is a simple URL shortener service, similar to Bitly. It allows user
 ├── routes/ url.js
 ├── connect.js
 ├── index.js
-└── package.json ```
+└── package.json
+```
 ### File/Folder Descriptions
 
 - **package.json**  
