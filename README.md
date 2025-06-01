@@ -8,18 +8,13 @@ This project is a simple URL shortener service, similar to Bitly. It allows user
 
 ## Project Structure
 
-```
-connect.js
-index.js
-package.json
-controllers/
-    url.js
-models/
-    url.js
-routes/
-    url.js
-```
-
+```bash project-root/
+├── controllers/ url.js
+├── models/ url.js
+├── routes/ url.js
+├── connect.js
+├── index.js
+└── package.json ```
 ### File/Folder Descriptions
 
 - **package.json**  
