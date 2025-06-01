@@ -6,6 +6,16 @@ This project is a simple URL shortener service, similar to Bitly. It allows user
 
 ---
 
+## Technologies Used
+
+- **Node.js** & **Express**: Server and routing.
+- **MongoDB** & **Mongoose**: Database and ODM.
+- **nanoid**: For generating unique short IDs.
+- **nodemon**: For development auto-reloading.
+
+
+---
+
 ## Project Structure
 
 ```bash project-root/
@@ -55,12 +65,56 @@ This project is a simple URL shortener service, similar to Bitly. It allows user
 
 ---
 
-## Technologies Used
 
-- **Node.js** & **Express**: Server and routing.
-- **MongoDB** & **Mongoose**: Database and ODM.
-- **nanoid**: For generating unique short IDs.
-- **nodemon**: For development auto-reloading.
+## How to Run
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) and npm installed
+- [MongoDB](https://www.mongodb.com/) running locally or a cloud instance (like MongoDB Atlas)
+
+### Steps
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/M-Salman-khan/URL_Shortner.git
+   cd URL_Shortner
+   ```
+
+2. **Install dependencies**
+
+   ```bash
+   npm install
+   ```
+
+3. **Set up environment variables**
+
+   Create a `.env` file in the root directory and add your MongoDB connection string:
+
+   ```env
+   MONGODB_URL=mongodb://localhost:27017/urlshortener
+   ```
+
+4. **Run the server**
+
+   - For development (with auto-reload using nodemon):
+
+     ```bash
+     npm run dev
+     ```
+
+   - For production:
+
+     ```bash
+     node index.js
+     ```
+
+5. **Access the API**
+
+   - Base URL: `http://localhost:3000/`
+   - Use a tool like [Postman](https://www.postman.com/) or [curl](https://curl.se/) to test endpoints.
+
 
 ---
 
