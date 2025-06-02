@@ -1,4 +1,6 @@
-# Bitly - URL Shortener Backend
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
+# URL Shortener Backend
 
 ## Overview
 
@@ -6,20 +8,26 @@ This project is a simple URL shortener service, similar to Bitly. It allows user
 
 ---
 
+## Technologies Used
+
+- **Node.js** & **Express**: Server and routing.
+- **MongoDB** & **Mongoose**: Database and ODM.
+- **nanoid**: For generating unique short IDs.
+- **nodemon**: For development auto-reloading.
+
+
+---
+
 ## Project Structure
 
+```bash project-root/
+├── controllers/ url.js
+├── models/ url.js
+├── routes/ url.js
+├── connect.js
+├── index.js
+└── package.json
 ```
-connect.js
-index.js
-package.json
-controllers/
-    url.js
-models/
-    url.js
-routes/
-    url.js
-```
-
 ### File/Folder Descriptions
 
 - **package.json**  
@@ -59,20 +67,6 @@ routes/
 
 ---
 
-## Technologies Used
-
-- **Node.js** & **Express**: Server and routing.
-- **MongoDB** & **Mongoose**: Database and ODM.
-- **nanoid**: For generating unique short IDs.
-- **nodemon**: For development auto-reloading.
-
----
-
-## Summary
-
-This project provides a basic backend for a URL shortener service, supporting URL creation, redirection, and visit tracking. It demonstrates RESTful API design, MongoDB integration, and modular code organization.
-
----
 
 ## How to Run
 
@@ -86,8 +80,8 @@ This project provides a basic backend for a URL shortener service, supporting UR
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
-   cd your-repo-name
+   git clone https://github.com/M-Salman-khan/URL_Shortner.git
+   cd URL_Shortner
    ```
 
 2. **Install dependencies**
@@ -120,5 +114,12 @@ This project provides a basic backend for a URL shortener service, supporting UR
 
 5. **Access the API**
 
-   - Base URL: `http://localhost:3000/`
+   - Base URL: `http://localhost:8000/`
    - Use a tool like [Postman](https://www.postman.com/) or [curl](https://curl.se/) to test endpoints.
+
+
+---
+
+## Summary
+
+This project provides a basic backend for a URL shortener service, supporting URL creation, redirection, and visit tracking. It demonstrates RESTful API design, MongoDB integration, and modular code organization.
