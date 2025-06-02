@@ -71,3 +71,54 @@ routes/
 ## Summary
 
 This project provides a basic backend for a URL shortener service, supporting URL creation, redirection, and visit tracking. It demonstrates RESTful API design, MongoDB integration, and modular code organization.
+
+---
+
+## How to Run
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) and npm installed
+- [MongoDB](https://www.mongodb.com/) running locally or a cloud instance (like MongoDB Atlas)
+
+### Steps
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/your-username/your-repo-name.git
+   cd your-repo-name
+   ```
+
+2. **Install dependencies**
+
+   ```bash
+   npm install
+   ```
+
+3. **Set up environment variables**
+
+   Create a `.env` file in the root directory and add your MongoDB connection string:
+
+   ```env
+   MONGODB_URL=mongodb://localhost:27017/urlshortener
+   ```
+
+4. **Run the server**
+
+   - For development (with auto-reload using nodemon):
+
+     ```bash
+     npm run dev
+     ```
+
+   - For production:
+
+     ```bash
+     node index.js
+     ```
+
+5. **Access the API**
+
+   - Base URL: `http://localhost:3000/`
+   - Use a tool like [Postman](https://www.postman.com/) or [curl](https://curl.se/) to test endpoints.

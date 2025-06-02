@@ -7,9 +7,25 @@ const urlRoute = require("./routes/url")
 app.use(express.json())
 
 app.use('/url', urlRoute)
+// app.get('/test',async(req,res)=>{
+//     const allUrls = await URL.find({})
+//     console.log(allUrls)
+    
+//     return res.end(`<html>
+//         <head>
+//         <title>Heading</title>
+//         </head>
+//         <body>
+//         <ol>
+//             ${allUrls.map(url => (
+//                 `<li>${url.shortId} - ${url.redirectURL} - ${url.visitHistory.length}</li>`
+//             )).join('')}
+//         </ol>
+//         </body>
+//         </html>`);
+// })
 
-
-app.get('/:shortId', async (req, res) => {
+app.get('/url/:shortId', async (req, res) => {
     const shortId = req.params.shortId
     const entry = await URL.findOneAndUpdate({
         shortId
