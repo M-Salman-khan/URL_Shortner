@@ -6,9 +6,9 @@ const PORT = 8000
 const URL = require("./models/url")
 const urlRoute = require("./routes/url")
 const staticRoute = require("./routes/staticRouter")
+require('dotenv').config();
 
-connectToMongoDB("mongodb+srv://thesalmankhan2021:ANxbUqW5zfyFUmz1@cluster0.9gkkpd2.mongodb.net/short-url")
-    .then(() => console.log("Connected to MongoDB Successfully"))
+connectToMongoDB(process.env.MONGODB_URI).then(() => console.log("Connected to MongoDB Successfully"))
 
 
 app.set("view engine", "ejs")

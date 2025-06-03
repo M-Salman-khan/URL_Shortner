@@ -13,10 +13,11 @@ async function handleGenerateNewShortURL(req, res) {
         visitHistory:[]
 
     })
-    return res.render("home",{id:shortID})
+    const LOCAL = process.env.NODE_ENV !== "production";
+    const baseUrl = LOCAL ? "http://localhost:8000" : "https://url-shortner-b509.onrender.com/";
+    return res.render("home",{id:shortID,baseUrl:baseUrl})
 }
 
 module.exports={
     handleGenerateNewShortURL,
-    
 }

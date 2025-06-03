@@ -14,9 +14,9 @@
         <input type="text" name="url" placeholder="https://example.com">
         <button>Generate</button>
         <% if (locals.id) { %>
-            <p>URL Generated : 
-                <a href="https://url-shortner-b509.onrender.com/url/<%= locals.id %>" target="_blank">
-                    https://url-shortner-b509.onrender.com/url/<%= locals.id %>
+            <p>URL Generated :
+                <a href="<%= locals.baseUrl %>/url/<%= locals.id %>" target="_blank">
+                    <%= locals.baseUrl %>/url/<%= id %>
                 </a>
             </p>
             <% } %>
