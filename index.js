@@ -7,7 +7,7 @@ const URL = require("./models/url")
 const urlRoute = require("./routes/url")
 const staticRoute = require("./routes/staticRouter")
 
-connectToMongoDB("mongodb://localhost:27017/short-url")
+connectToMongoDB("mongodb+srv://thesalmankhan2021:ANxbUqW5zfyFUmz1@cluster0.9gkkpd2.mongodb.net/short-url")
     .then(() => console.log("Connected to MongoDB Successfully"))
 
 
