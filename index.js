@@ -8,7 +8,8 @@ const urlRoute = require("./routes/url")
 const staticRoute = require("./routes/staticRouter")
 require('dotenv').config();
 
-connectToMongoDB(process.env.MONGODB_URI).then(() => console.log("Connected to MongoDB Successfully"))
+connectToMongoDB(process.env.MONGODB_LOCAL || process.env.MONGODB_URI).then(() => console.log("Connected to MongoDB Successfully"))
+.catch((err) => console.error("MongoDB Connection Failed:", err));
 
 
 app.set("view engine", "ejs")
