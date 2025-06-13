@@ -10,7 +10,8 @@ async function handleGenerateNewShortURL(req, res) {
     await URL.create({
         shortId: shortID,
         redirectURL:body.url,
-        visitHistory:[]
+        visitHistory:[],
+        createdBy:req.user._id
 
     })
     const LOCAL = process.env.NODE_ENV !== "production";

@@ -4,23 +4,31 @@ const app = express()
 const { connectToMongoDB } = require('./connect')
 const PORT = 8000
 const URL = require("./models/url")
-const urlRoute = require("./routes/url")
-const staticRoute = require("./routes/staticRouter")
+
 require('dotenv').config();
 
-connectToMongoDB(process.env.MONGODB_LOCAL || process.env.MONGODB_URI).then(() => console.log("Connected to MongoDB Successfully"))
+const cookieParser = require("cookie-parser")
+
+connectToMongoDB(process.env.MONGODB_LOCAL || process.env.MONGODB_URL).then(() => console.log("Connected to MongoDB Successfully"))
 .catch((err) => console.error("MongoDB Connection Failed:", err));
 
+
+const urlRoute = require("./routes/url")
+const staticRoute = require("./routes/staticRouter")
+const userRoute = require("./routes/user")
+const {restricToUserLoggedInUserOnly} = require("./middlewares/auth")
 
 app.set("view engine", "ejs")
 
 app.set("views", path.resolve("./views"))
 
 app.use(express.json())
+app.use(cookieParser())
 app.use(express.urlencoded({extended:false}))
 
-app.use('/url', urlRoute)
 app.use('/', staticRoute)
+app.use('/user', userRoute)
+app.use('/url', urlRoute)
 
 
 
