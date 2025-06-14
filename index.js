@@ -16,7 +16,8 @@ connectToMongoDB(process.env.MONGODB_LOCAL || process.env.MONGODB_URL).then(() =
 const urlRoute = require("./routes/url")
 const staticRoute = require("./routes/staticRouter")
 const userRoute = require("./routes/user")
-const {restricToUserLoggedInUserOnly} = require("./middlewares/auth")
+const {restricToUserLoggedInUserOnly,checkAuth} = require("./middlewares/auth")
+
 
 app.set("view engine", "ejs")
 
@@ -26,9 +27,9 @@ app.use(express.json())
 app.use(cookieParser())
 app.use(express.urlencoded({extended:false}))
 
-app.use('/', staticRoute)
-app.use('/user', userRoute)
-app.use('/url', urlRoute)
+app.use('/', checkAuth,staticRoute)
+app.use('/user',userRoute)
+app.use('/url',restricToUserLoggedInUserOnly, urlRoute)
 
 
 

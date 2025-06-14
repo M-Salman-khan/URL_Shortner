@@ -1,6 +1,6 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-# URL Shortener (Fullstack with EJS Frontend)
+# URL Shortener (Fullstack with EJS Frontend) 🚀
 
 ## Overview
 
@@ -17,6 +17,7 @@ The backend is built using Node.js, Express, and MongoDB (via Mongoose).
 - **nanoid**: For generating unique short IDs
 - **EJS**: For server-side rendering of frontend pages
 - **nodemon**: For development auto-reloading
+- **Authentication**: User authentication is implemented to secure URL generation.
 
 ---
 
@@ -28,6 +29,7 @@ project-root/
 ├── models/           # Mongoose models (url.js)
 ├── routes/           # Express routers (url.js)
 ├── views/            # EJS templates (home.ejs)
+├── middlewares/      # Middleware functions (auth.js)
 ├── connect.js        # MongoDB connection helper
 ├── index.js          # Main server file
 └── package.json      # Project metadata and dependencies
@@ -55,6 +57,9 @@ project-root/
 
 - **views/home.ejs**  
   EJS template for the frontend, allowing users to submit URLs and view generated short URLs and their click counts.
+
+- **middlewares/auth.js**  
+  Contains middleware for user authentication, ensuring that only logged-in users can generate short URLs.
 
 ---
 
@@ -141,4 +146,4 @@ project-root/
 
 ## Summary
 
-This project provides a basic backend and frontend for a URL shortener service, supporting URL creation, redirection, visit tracking, and a simple web interface for users.
+This project provides a basic backend and frontend for a URL shortener service, supporting URL creation, redirection, visit tracking, and a simple web interface for users. Authentication is implemented to secure URL generation.
